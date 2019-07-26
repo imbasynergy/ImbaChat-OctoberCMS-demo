@@ -1,0 +1,1 @@
+resetReCaptcha('{{ __SELF__ }}');

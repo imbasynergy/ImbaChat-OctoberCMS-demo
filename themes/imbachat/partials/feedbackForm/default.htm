@@ -1,0 +1,8 @@
+<form data-request="{{ __SELF__ }}::onFormSubmit" id="help-form">
+    {{ form_token() }}
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="phone" placeholder="Phone number" required>
+    <textarea placeholder="Your question..."></textarea>
+    <button>Send</button>
+</form>

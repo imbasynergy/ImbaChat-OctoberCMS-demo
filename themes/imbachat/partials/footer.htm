@@ -1,0 +1,89 @@
+<div class="container position-relative">
+    <div class="row pb-2">
+        <div class="col col-12 col-md-8 col-lg-5 footer-text">
+            <div class="narrow">
+                <h4 class="mb-3">support and update features</h4>
+                <p>We are ready to support each customer in updating and installing the chat application on the site.</p>
+            </div>
+        </div>
+        <div class="col col-12 col-md-4 col-lg-3">
+            <div class="footer-contacts narrow">
+                <div class="d-flex align-items-center justify-content-start">
+                    <a href="#"><img src="{{ 'assets/img/email.svg'|theme }}" width="16px" height="16px" alt="">taran.v@imbasynergy.com</a>
+                </div>
+                <div class="d-flex align-items-center justify-content-start">
+                    <a href="#"><img src="{{ 'assets/img/telegram.svg'|theme }}" width="16px" height="16px" alt="">telegram @taran_vadim</a>
+                </div>
+                <div class="d-flex align-items-center justify-content-start">
+                    <a href="#"><img src="{{ 'assets/img/phone.svg'|theme }}" width="16px" height="16px" alt="">+ 61 416 103 106</a>
+                </div>
+            </div>
+        </div>
+        <div class="col col-12 col-md-6 col-lg-4 footer-menu">
+            <nav class="navbar navbar-expand">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav narrow">
+                        <li class="nav-item dropdown dropup">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product</a>
+                            <div class="dropdown-menu dropdown-menu-1 animate slideIn" aria-labelledby="navbarDropdown">
+                                <ul class="main-menu">
+                                    <li><a href="#">Integration stages</a></li>
+                                    <li><a href="#">API integration</a></li>
+                                    <li><a href="#">Installation</a></li>
+                                    <li><a href="#">Backend</a></li>
+                                    <li><a href="#">Custom solution</a></li>
+                                    <li><a href="#">Updates</a></li>
+                                    <li><a href="#">Projects</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropup">
+                            <a class="nav-link dropdown-toggle no-arrow" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help</a>
+                            <div class="dropdown-menu dropdown-menu-3 animate slideIn" aria-labelledby="navbarDropdown">
+                                <p>We are open to communication and ready to respond to all your questions</p>
+                                <form id="help-form" method="" action="">
+                                    <input type="text" name="" placeholder="Name" required>
+                                    <input type="text" name="" placeholder="Email" required>
+                                    <input type="text" name="" placeholder="Phone number" required>
+                                    <textarea placeholder="Your question..."></textarea>
+                                    <button>Send</button>
+                                </form>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropup">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Eng</a>
+                            <div class="dropdown-menu lang animate slideIn" aria-labelledby="navbarDropdown">
+                                <span>Ru</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col col-12 col-md-12 col-lg-9">
+            {% component 'contactUsForm' %}
+        </div>
+        <div class="col col-12 col-md-4 col-lg-3 copyright d-flex justify-content-end align-items-center">
+            <span>© 2019 ImbaChat. All rights reserved.</span>
+        </div>
+    </div>
+</div>
+<!-- Modal Send -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form id="send-form" class="d-flex flex-column justify-content-center align-items-center">
+                    <p>SEND US A MESSAGE</p>
+                    <input type="text" name="" placeholder="Name" required>
+                    <input type="text" name="" placeholder="Email" required>
+                    <input type="text" name="" placeholder="Phone number" required>
+                    <textarea placeholder="Your message..."></textarea>
+                    <button>Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

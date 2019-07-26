@@ -1,0 +1,14 @@
+{% if __SELF__.property('user_id') != 0 %}
+    <script src="http://dev2.imbachat.com/imbachat/v1/{{__SELF__.property('dev_id')}}/widget"></script>
+    <script>
+        function imbachatWidget(){
+            if(!window.ImbaChat){
+                return setTimeout(imbachatWidget, 50);
+            }
+
+            window.ImbaChat.load({{__SELF__.getJsSettingsString()|raw}})
+        }
+        imbachatWidget();
+    </script>
+{% endif %}
+

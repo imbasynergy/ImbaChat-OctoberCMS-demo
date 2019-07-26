@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+{% partial 'head' %}
+<body>
+
+
+<header class="d-flex align-items-center position-relative">
+    {% partial 'header' %}
+</header>
+{% page %}
+<footer>
+    {% partial 'footer' %}
+</footer>
+
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>-->
+
+<!-- Modal Start -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                {% partial 'sign-in' %}
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

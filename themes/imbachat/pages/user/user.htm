@@ -1,0 +1,54 @@
+title = "User"
+url = "/user"
+layout = "default"
+is_hidden = 0
+
+[session]
+security = "user"
+redirect = "user/sign-in"
+==
+==
+<div class="box box-info">
+    <div class="box-header with-border">
+        <h3 class="box-title">User settings</h3>
+    </div>
+    <!-- /.box-header -->
+    <!-- form start -->
+    {{ form_ajax('onUpdate', { class: 'form-horizontal'})}}
+    <div class="box-body">
+        <div class="form-group">
+            <label for="accountName" class="col-sm-2 control-label">Name</label>
+
+            <div class="col-sm-10">
+                <input type="text" name="name" class="form-control" id="accountName" placeholder="Name" value="{{ user.name }}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="accountEmail" class="col-sm-2 control-label">Email</label>
+
+            <div class="col-sm-10">
+                <input type="email" name="email" class="form-control" id="accountEmail" placeholder="Email" value="{{ user.email }}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="accountPassword" class="col-sm-2 control-label">New Password</label>
+
+            <div class="col-sm-10">
+                <input type="password" name="password" class="form-control" id="accountPassword" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="accountPasswordConfirm" class="col-sm-2 control-label">Confirm New Password</label>
+
+            <div class="col-sm-10">
+                <input type="password" name="password_confirmation" class="form-control" id="accountPasswordConfirm" placeholder="Password confirmation">
+            </div>
+        </div>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer">
+        <button type="submit" class="btn btn-info pull-right">Update</button>
+    </div>
+    <!-- /.box-footer -->
+    {{ form_close() }}
+</div>

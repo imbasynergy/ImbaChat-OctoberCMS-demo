@@ -1,0 +1,54 @@
+title = "ImbaChat"
+url = "/"
+layout = "default"
+is_hidden = 0
+
+[account]
+redirect = "{{ /admin/widgets  }}"
+paramCode = "code"
+forceSecure = 0
+
+[session]
+security = "all"
+
+[genericForm FeedbackForm]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+
+[genericForm contactUsForm]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+
+[ImbaSynergy\imbachatwidget\Components\ImbaChat ImbaChat]
+user_id = 1
+==
+<section class="sec1">
+    {% content 'main/section-1.htm' %}
+</section>
+<section class="sec2 wow slideInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+    {% content 'main/section-2.htm' %}
+</section>
+<section class="sec3 position-relative">
+    {% content 'main/section-3.htm' path='assets/img'|theme %}
+</section>
+<section class="sec4 position-relative">
+    {% content 'main/section-4.htm' %}
+</section>
+<section class="sec5 position-relative">
+    {% content 'main/section-5.htm' path='assets/img'|theme %}
+</section>
+<section class="sec6 position-relative">
+    {% content 'main/section-6.htm' path='assets/img'|theme %}
+</section>{% component 'ImbaChat' %}

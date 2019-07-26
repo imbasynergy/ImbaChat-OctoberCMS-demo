@@ -1,0 +1,527 @@
+@media (min-width: 992px) and (max-width: 1199px) {
+	.ipad {
+	    width: 500px;
+	    height: 403px;
+	    transform: translateX(-22px);
+	    background: url(../img/ipad.svg) no-repeat;
+	    background-size: contain;
+	}
+	.macbook {
+		background-size: contain;
+		    width: 550px;
+	}
+	.learn-box {
+		padding: 0;
+	}
+	.request {
+	    transform: none;
+	    padding: 0;
+	}
+	footer a {
+	    font-size: 13px;
+	}
+	footer h4 {
+		font-size: 22px;
+	}
+	.copyright {
+	    font-size: 11px;
+	}
+	footer .dropdown-menu-3 {
+	    width: 304px;
+	}
+}
+@media (max-width: 992px) {
+	.custom-solution,
+	.update-box {
+		width: 480px;
+    	margin: 0 auto;
+	}
+	.solution {
+    	margin-top: 250px;
+	}
+	.custom-solution h4 {
+		color: #000;
+    	text-align: center;
+	}
+	.custom-solution p {
+		color: #000;
+	    margin: 0;
+	    width: 100%;
+	    margin-bottom: 50px;
+	}
+	.request span {
+		width: 480px;
+    	margin: 0 auto 37px;
+    	transform: none;
+	}
+	.request {
+		transform: none;
+		padding: 0;
+		max-width: 480px;
+    	margin: 0 auto;
+	}
+	.sec3:after,
+	.sec4:after {
+		display: none;
+	}
+	.circle {
+		background: url(../img/ellipse.png) no-repeat;
+	    width: 100%;
+	    height: 1014px;
+	    top: -230px;
+	    left: 0;
+	    right: 0;
+	    border-radius: 0;
+	    background-size: cover;
+	}
+	.main-phone {
+		background: url(../img/main-phone-tablet.png) no-repeat;
+	    width: 233px;
+	    position: absolute;
+	    right: 0px;
+	    top: -80px;
+	}
+	.container {
+    	max-width: 100%;
+	}
+	h2 {
+		width: 75%;
+	}
+	.learn-box br {
+		display: block;
+	}
+	.sec5 {
+	    padding: 0px 0;
+	}
+	.sec5 h4 {
+		text-align: center;
+	}
+	.update-box p {
+		width: 100%;
+	}
+	.icons-box {
+	    width: 510px;
+	    margin: 0 auto;
+	}
+	.sec4 {
+	    padding-bottom: 200px;
+	}
+	.box3 {
+	    transform: none;
+	}
+	.sec6 {
+		margin-top: 150px;
+	}
+	.show-all {
+ 		margin: 80px auto 50px;
+	}
+	.modal-dialog {
+	  margin: 4.75rem auto;
+	}
+}
+@media (min-width: 767px) and (max-width: 992px) {
+	.footer-menu {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 2;
+	}
+	.copyright {
+		position: absolute;
+		bottom: 17px;
+		left: 0;
+		z-index: 2;
+		justify-content: flex-start !important;
+	}
+	footer {
+		padding: 75px 0 40px;
+	}
+	#footer-form {
+		margin-bottom: 100px;
+	}
+	.sec2 {
+		margin-top: 250px;
+	}
+	.circle {
+		height: 1311px;
+    	top: -500px;
+	}
+	.sec3 p {
+		width: 95%;
+	}
+	.ipad {
+		width: 290px;
+		position: absolute;
+		right: -22px;
+		background: url(../img/ipad-tablet.png) no-repeat;
+	}
+	.macbook {
+		width: 290px;
+		position: absolute;
+		left: 50px;
+		background: url(../img/macbook-tablet.png) no-repeat;
+	}
+	.box {
+		padding: 45px 30px;
+	}
+	.box p {
+		width: 80%;
+	}
+	.box img {
+		right: 30px;
+	}
+	.circle2 {
+		display: none;
+	}
+	.ipad-box:after {
+	  content: "";
+	  right: 0;
+	  top: -340px;
+	  z-index: -1;
+	  width: 208px;
+	  height: 1081px;
+	  position: absolute;
+	  background: url(../img/ellipse2-tablet.png) no-repeat;
+	}
+	.macbook-box:after {
+	  content: "";
+	  left: 0px;
+      top: -150px;
+	  z-index: -1;
+	  width: 208px;
+	  height: 1081px;
+	  position: absolute;
+	  background: url(../img/ellipse3-tablet.png) no-repeat;
+	}
+}
+@media (max-width: 767px) {
+	.modal-dialog {
+	  margin: 2.75rem auto;
+	}
+	body .sec1 h1 {
+		text-align: center;
+		margin-bottom: 50px !important;
+	}
+	h2 {
+		text-align: center;
+	    margin: 0 auto;
+	    width: 87%;
+	}
+	.sec1 {
+	    padding-top: 50px;
+	}
+	.main-phone {
+		display: none;
+	}
+	header {
+		height: 173px;
+	}
+	header .col:last-child {
+		position: absolute;
+		top: 33px;
+		right: 20px;
+		max-width: 24%;
+	}
+	#navbarSupportedContent {
+		justify-content: center;
+	}
+	.navbar-left {
+		padding: .5rem 0rem;
+	}
+	.navbar-left .navbar-nav {
+		justify-content: space-between;
+    	width: 100%;
+	}
+	.navbar-expand .navbar-nav .dropdown-menu {
+	    position: fixed;
+	    left: 0;
+	    right: 0;
+	    width: 100%;
+	    top: 171px;
+	    border-radius: 0;
+	}
+	.main-menu a {
+		text-align: center;
+	}
+	.link-box {
+		flex-direction: column;
+	}
+	.start,
+	.backend-box {
+		order: 1;
+		margin-bottom: 20px;
+	}
+	.talk,
+	.macbook-box {
+		order: 2;
+	}
+	.how {
+		margin-left: 0;
+	}
+	.ball {
+		background: url(../img/phone-img-mobile.png) no-repeat;
+		width: 182px;
+		height: 549px;
+		border-radius: 0;
+		position: absolute;
+	    top: 0;
+	    right: 0;
+	}
+	.phone-img {
+		background: none;
+	}
+	.pulse1 {
+	    top: 47px;
+	    left: 96px;
+	}
+	.pulse2 {
+	    bottom: 197px;
+	    left: 142px;
+	}
+	.pulse3 {
+	    top: 228px;
+	    right: 87px;
+	}
+	.pulse4 {
+	    top: 137px;
+	    right: 20px;
+	}
+	.pulse5 {
+	    bottom: 88px;
+	    right: 60px;
+	}
+	.tooltip-inner {
+		min-width: 195px;
+	}
+	.sec2 {
+		height: 600px;
+	}
+	.ipad {
+		width: 314px;
+		height: 277px;
+		position: absolute;
+		right: -22px;
+		background: url(../img/ipad-mobile.png) no-repeat;
+	}
+	.box-inner {
+	    margin-top: 425px;
+	}
+	.sec3 p {
+		margin-bottom: 100px;
+		width: 100%;
+	}
+	.box img {
+	    top: 30px;
+	    right: 15px;
+	}
+	.box {
+	    padding: 30px 20px;
+	    margin-bottom: 15px;
+	}
+	.box p {
+		width: 95%;
+	}
+	.circle2 {
+		display: none;
+	}
+	.sec3 h4,
+	.sec4 h4 {
+		width: 65%;
+		font-size: 18px;
+    	line-height: 25px;
+	}
+	.sec3 span {
+		right: 15px;
+    	top: -60px;
+    	position: absolute;
+	}
+	.ipad-box:after {
+		content: "";
+		right: 0;
+		top: -105px;
+		z-index: -1;
+		height: 1081px;
+		position: absolute;
+		width: 156px;
+		background: url(../img/ellipse2-mobile.png) no-repeat;
+	}
+	.learn-box {
+	    padding: 0;
+	    flex-direction: column;
+	    text-align: center;
+	}
+	.learn-box p {
+		margin-bottom: 25px !important;
+	}
+	.box3 {
+	    transform: none;
+	}
+	.macbook-box:after {
+		content: "";
+		left: 0;
+		top: -65px;
+		z-index: -1;
+		height: 346px;
+		position: absolute;
+		width: 194px;
+		background: url(../img/ellipse3-mobile.png) no-repeat;
+	}
+	.macbook {
+		width: 312px;
+		height: 307px;
+		position: absolute;
+		left: 50px;
+		background: url(../img/macbook-mobile.png) no-repeat;
+	}
+	.sec4 span {
+		right: 0px;
+	    top: -15px;
+	    position: absolute;
+	}
+	.sec3 {
+	    padding: 0 0 125px;
+	    margin-top: 275px;
+	}
+	.learn-box br {
+		display: none;
+	}
+	.sec4 p {
+   		width: 100%;
+	    margin-bottom: 100px;
+	}
+	.solution {
+    	margin-top: 375px;
+	}
+	.custom-solution h4 {
+		width: 100%;
+    	font-size: 22px;
+    	line-height: 36px;
+	}
+	.request span {
+		font-size: 18px;
+		position: static;
+		text-align: center;
+    	padding: 0 10px;
+	}
+	.custom-solution p {
+		margin-bottom: 60px;
+	}
+	.request button {
+		float: none;
+    	margin: 75px auto;
+    	display: block;
+	}
+	.custom-solution,
+	.update-box,
+	.icons-box {
+	    width: 100%;
+	}
+	.sec5 h4 {
+	    text-align: left;
+	    font-size: 18px;
+	    line-height: 25px;
+	    width: 75%;
+	}
+	.sec5 span {
+	    right: 15px;
+	    top: -60px;
+	    position: absolute;
+	}
+	footer {
+		padding: 30px 0;
+	}
+	.footer-menu {
+		position: absolute;
+    	top: 0;
+	}
+	.footer-text {
+		margin-top: 100px;
+		margin-bottom: 40px;
+	}
+	footer .navbar {
+		padding: .5rem 1rem;
+	}
+	#footer-form input,
+	#footer-form button {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.copyright {
+		margin-top: 100px;
+		justify-content: center!important;	
+	}
+	footer .navbar-expand .navbar-nav .dropdown-menu {
+	    top: 0;
+	    align-items: center;
+	    flex-direction: column;
+    	justify-content: center;
+    	min-height: 100%;
+	}
+	footer .dropup.show .dropdown-menu{
+		display: flex;
+	}
+	.dropup .dropdown-toggle::after {
+		transform: rotate(180deg);
+	}
+}
+@media (min-width: 500px) and (max-width: 767px) {
+	.narrow {
+		width: 480px !important;
+		margin-right: auto;
+		margin-left: auto;
+		position: relative;
+	}
+}
+@media (max-width: 500px) {
+	#send-form input,
+	#send-form textarea,
+	#send-form button {
+    	width: 100%;
+	}
+	.modal-dialog {
+	  margin: 0 auto;
+	  width: 100%;
+	  height: 100vh;
+	}
+	#send-form {
+		border-radius: 0;
+	}
+	h1 {
+		font-size: 38px;
+    	line-height: 60px;
+	}
+	header .col:last-child {
+		max-width: 30%;
+	}
+	.circle {
+		top: -200px;
+	}
+	.custom-solution,
+	.request,
+	.request span {
+	    width: 100%;
+	}
+	.custom-solution p {
+	    margin-bottom: 45px;
+	}
+	.request button {
+	    margin: 50px auto;
+	}
+}
+@media (max-width: 396px) {
+	.circle2 {
+	    width: 156px;
+	    background: url(../img/ellipse2-mobile.png) no-repeat;
+	    height: 486px;
+	    bottom: 793px;
+	    top: auto;
+	}
+	.learn-box button {
+		width: 95%;
+	}
+}
+@media (max-width: 374px) {
+	.navbar-left .nav-link {
+		margin-right: 0 !important;
+	}
+}

@@ -1,0 +1,20 @@
+title = "Registrate"
+url = "/user/registrate"
+layout = "default"
+is_hidden = 0
+
+[session]
+security = "guest"
+redirect = "main"
+
+[account]
+redirect = "user/user"
+paramCode = "code"
+forceSecure = 0
+==
+<form id="send-form" data-request="onRegister" class="d-flex flex-column justify-content-center align-items-center">
+    <input type="text" name="name" placeholder="Name" id="registerName" required>
+    <input type="email" name="email" placeholder="Email" id="registerEmail" required>
+    <input type="password" name="password" placeholder="Password" id="registerPassword" required>
+    <button type="submit">Registrate</button>
+</form>

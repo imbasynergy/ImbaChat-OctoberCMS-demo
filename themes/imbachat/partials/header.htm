@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-md-4 col-lg-6">
+            <a href="/"><img src="{{ 'assets/img/logo.svg'|theme }}" class="logo" alt=""></a>
+        </div>
+        <div class="col col-12 col-md-6 col-lg-4">
+            <nav class="navbar navbar-left navbar-expand">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav narrow">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mr-4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product</a>
+                            <div class="dropdown-menu dropdown-menu-1 animate slideIn" aria-labelledby="navbarDropdown">
+                                <ul class="main-menu">
+                                    <li><a href="#">Integration stages</a></li>
+                                    <li><a href="#">API integration</a></li>
+                                    <li><a href="#">Installation</a></li>
+                                    <li><a href="#">Backend</a></li>
+                                    <li><a href="#">Custom solution</a></li>
+                                    <li><a href="#">Updates</a></li>
+                                    <li><a href="#">Projects</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mr-4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
+                            <div class="dropdown-menu dropdown-menu-2 animate slideIn" aria-labelledby="navbarDropdown">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <a href="#"><img src="{{ 'assets/img/email.svg'|theme }}" width="16px" height="16px" alt="">taran.v@imbasynergy.com</a>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <a href="#"><img src="{{ 'assets/img/telegram.svg'|theme }}" width="16px" height="16px" alt="">telegram @taran_vadim</a>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <a href="#"><img src="{{ 'assets/img/phone.svg'|theme }}" width="16px" height="16px" alt="">+ 61 416 103 106</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mr-4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help</a>
+                            <div class="dropdown-menu dropdown-menu-3 animate slideIn" aria-labelledby="navbarDropdown">
+                                <p>We are open to communication and ready to respond to all your questions</p>
+                                {% component 'feedbackForm' %}
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="col col-2">
+            <nav class="navbar navbar-expand">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        {% if user %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mr-4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+                            <div class="dropdown-menu dropdown-menu-1 animate slideIn" aria-labelledby="navbarDropdown">
+                                <ul class="main-menu">
+                                    <li><a href="/user">Cabinet</a></li>
+                                    <li><a data-request="onLogout" data-request-data="redirect: '/'">Sign out</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        {% else %}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link mr-4" href="#" data-toggle="modal" data-target="#exampleModal2">Sign in</a>
+                            </li>
+                        {% endif %}
+                        <li class="nav-item dropdown" style="display:none;">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Eng</a>
+                            <div class="dropdown-menu lang animate slideIn" aria-labelledby="navbarDropdown">
+                                <span>Ru</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,15 @@
+title = "SignIn"
+url = "/user/signin"
+layout = "default"
+is_hidden = 0
+
+[account]
+redirect = "user/user"
+paramCode = "code"
+forceSecure = 0
+
+[session]
+security = "guest"
+redirect = "main"
+==
+{% partial 'sign-in' %}

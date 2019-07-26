@@ -1,0 +1,12 @@
+title = "Reset password"
+url = "/user/reset_pass"
+layout = "default"
+is_hidden = 0
+
+[resetPassword]
+paramCode = "code"
+==
+<form id="send-form" data-request="resetPassword::onRestorePassword" data-request-update="'resetPassword::reset': '#partialUserResetForm'" class="d-flex flex-column justify-content-center align-items-center">
+    <input type="email" name="email" placeholder="Email" id="userSigninLogin" required>
+    <button type="submit">Restore password</button>
+</form>
