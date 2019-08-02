@@ -7,6 +7,40 @@
 <header class="d-flex align-items-center position-relative">
     {% partial 'header' %}
 </header>
+<div class="user-list">
+	<h2>Попробуйте чат на тестовых аккаунтах</h2>
+	<ul>
+		<li style="color: #7b7b7b;">Логин - Пароль</li>
+		<li>vasiliy@mail.com - vasiliyvasiliy</li>
+		<li>seriy@mail.com - seriyseriy</li>
+		<li>sean@mail.com - seansean</li>
+		<li>vitaliy@mail.com - vitaliyvitaliy</li>
+	</ul>
+</div>
+<style>
+	.user-list {
+	    margin: 20px;
+	    text-align: center;
+	    background: white;
+	    padding: 20px;
+	    border: 1px solid #ccc;
+	    border-radius: 3px;
+	}
+	.user-list ul {
+	    padding: 0;
+	}
+	.user-list h2 {
+	    font-size: 24px;
+	    width: 100%;
+	    color: black;
+	    border-bottom: 1px solid #ccc;
+	    padding-bottom: 10px;
+	}
+	.user-list li {
+	    list-style-type: none;
+	    margin-top: 20px;
+	}
+</style>
 {% page %}
 <footer>
     {% partial 'footer' %}
