@@ -18,5 +18,17 @@ class Plugin extends PluginBase
             'description' => 'ImbaChat integration'
         ];
     }
-
+    public function registerSettings()
+    {
+        return [
+            'settings' => [
+                'label'       => 'ImbaChat',
+                'description' => 'ImbaChat Settings.',
+                'icon'        => 'icon-location-arrow',
+                'class'       => 'ImbaSynergy\imbachatwidget\Models\Settings',
+                'order'       => 100,
+                'permissions' => ['ImbaSynergy.imbachatwidget.access_settings'],
+            ]
+        ];
+    }
 }

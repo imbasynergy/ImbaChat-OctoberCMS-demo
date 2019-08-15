@@ -3,6 +3,7 @@
 namespace ImbaSynergy\imbachatwidget\Components;
 
 use ReallySimpleJWT\Token;
+use ImbaSynergy\imbachatwidget\Models\Settings;
 
 class ImbaChat extends \Cms\Classes\ComponentBase {
 
@@ -21,7 +22,6 @@ class ImbaChat extends \Cms\Classes\ComponentBase {
 
         $user_id = \Auth::getUser()->id;
         $token = self::getJWT();
-
         $extend_settings = array_merge(
             [
                 // Предустановленные значения по умолчанию
@@ -37,7 +37,7 @@ class ImbaChat extends \Cms\Classes\ComponentBase {
             ], $opt);
 
         // Событие для дополнения настроек из других плагинов
-        \Event::fire('ImbaSynergy.ImbaChat.default.settings', [&$extend_settings]);
+        \Event::fire('ImbaSynergy.imbachatwidget.default.settings', [&$extend_settings]);
 
         // Итоговые настройки виджета
         return json_encode($extend_settings);
@@ -49,7 +49,7 @@ class ImbaChat extends \Cms\Classes\ComponentBase {
     {
 // Create token header as a JSON string
         $header = json_encode(['typ' => 'JWT', 'alg' => 'HS256']);
-        $pass = \Config::get('imbasynergy.imbachatwidget::in_password');
+        $pass = Settings::get('in_password');
         $data = array();
         $data['exp'] = (int)date('U')+3600*7;
         $data['user_id'] = \Auth::getUser()->id;
@@ -133,7 +133,7 @@ class ImbaChat extends \Cms\Classes\ComponentBase {
             ],
             'dev_id' => [
                 'title' => 'Developer id',
-                'default' => \Config::get('imbasynergy.imbachatwidget::dev_id')
+                'default' => $login = Settings::get('dev_id')
             ]
         ];
     }

@@ -1,34 +1,14 @@
 # https://octobercms.com/plugin/ImbaChat-OctoberCMS 
 
-## Шаги установки виджета ImbaChat:
+## Plugin usage:
+Page:
+- Include `[imbaChat]` component to your layout file.
 
-### 1. Настройка плагина на нашем сайте 
-
-- Зарегистирируйтесь на сайте http://dev2.imbachat.com.
-
-+ Зайдите на страницу с виджетами ( http://dev2.imbachat.com/admin/widgets ). Нажмите "создать" и заполните поля:
-  + "Секретный ключ" - секретный ключ для формирования токена. 
-  + "Out password" - логин и пароль для аутентификации разрабочтика. Логин и пароль нужно вводить через двоеточие.
-  + "Debug" - включает режим отладки (Не рекомендуется включать).
-  + "URL для получения пользователей"
-  + "Разделитель для аргументов функции получения пользователей"
-  + "URL для авторизации пользователя через логин и пароль"
-  + "Имя"
-  + "no_password" - отлючает проверку авторизации (Не рекомендуется включать).
-+ Нажмиет "Создать"
-
-
-### 2. Вставка компонента на страницу
-- Подключите `[imbaChat]` компонент в файле страницы.
-
-- `[imbaChat]` компонент вставляет javascript, который инициализиует ImbaChat ( важно, что бы этот javascript был после подключаемого jquery ): 
+- The `[imbaChat]`  component inserts javascript to initialize: 
     ```
     {% component 'ImbaChat'  %}
- 
- 
- ### 3. Настройка конфига
- 
- + Окройте файл `/plugins/imbasynergy/imbachatwidget/config/config.php` и измените значение полей:
-  + `dev_id` - id разработчика ( смотрите на странице виджета ).
-  + `in_password` - секретный ключ, который вы вводили при создание виджета.
-  + `login` и `password` логин и пароль аутентификации, которые вы вводили через двоеточие в поле "Out password"
+    ```
+Config:
+- `dev_id` - id developers.
+- `in_password` - password to form token. This parameter set on page admin.
+- `login` and `password` need to set sthrough the colon in field `out_password`  on page admin
