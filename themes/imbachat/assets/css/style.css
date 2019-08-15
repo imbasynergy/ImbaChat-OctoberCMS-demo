@@ -15,7 +15,7 @@ body {
   animation: fadein 2s;
   overflow-x: hidden;
   background: #FDFDFD;
-  font-family: Poppins-Regular;
+  font-family: 'Montserrat', sans-serif;
 }
 header {
   height: 128px;
@@ -87,10 +87,19 @@ h1 {
 h2 {
   color: #fff;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 30px;
-  opacity: 0.9;
-  width: 65%;
+  width: 74%;
+}
+h2 a,
+.view-link {
+  font-size: 18px;
+  color: #000000;
+}
+h2 a:hover,
+.view-link:hover {
+  color: #000000;
+  text-decoration: underline
 }
 .talk {
   background: rgba(255, 255, 255, 0.1);
@@ -124,7 +133,6 @@ h2 {
   text-transform: uppercase;
   color: #201C2B;
   padding: 15px 48px;
-  width: 252px;
   text-align: center;
   transition: .3s;
   border: 1px solid rgba(255, 255, 255, 0);
@@ -175,7 +183,6 @@ h2 {
 .dropdown-menu-3 {
   width: 316px;
   left: -130px;
-  background: rgba(23, 26, 32, 0.97);
   backdrop-filter: blur(4px);
 }
 .main-menu a {
@@ -185,6 +192,9 @@ h2 {
   color: #fff;
   margin-bottom: 15px;
   display: block;
+}
+footer .dropdown-menu {
+  background: #23262C;
 }
 .main-menu {
   padding-left: 0;
@@ -212,7 +222,7 @@ h2 {
 #help-form textarea {
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 4px;
-  font-family: Poppins-Light;
+  font-weight: 300;
   font-size: 12px;
   line-height: 15px;
   color: #fff;
@@ -235,14 +245,14 @@ h2 {
 #help-form input:-ms-input-placeholder,
 #help-form textarea:-ms-input-placeholder {
   color: #949599;
-  font-family: Poppins-Light;
+  font-weight: 300;
   font-size: 12px;
 }
 #help-form textarea {
   height: 105px;
 }
 #help-form button {
-  font-family: Poppins-Medium;
+  font-weight: 500;
   font-size: 13px;
   line-height: 19px;
   letter-spacing: 0.363636px;
@@ -341,7 +351,7 @@ h2 {
   text-align: left;   
 }
 .tooltip-inner span {
-  font-family: Poppins-Medium;
+  font-weight: 500;
   font-size: 14px;
   line-height: 32px;
   color: #fff;
@@ -386,7 +396,7 @@ h2 {
 .sec4 span {
   font-size: 11px;
   line-height: 13px;
-  font-family: Poppins-Medium;
+  font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #9E9E9E;
@@ -536,7 +546,7 @@ h2 {
   color: #000000;
   text-transform: none;
   letter-spacing: 1px;
-  font-family: Poppins-Regular;
+  font-family: 'Montserrat', sans-serif;
   text-align: left;
   margin-top: -34px;
   padding: 0;
@@ -578,7 +588,7 @@ h2 {
 .update-box span {
   font-size: 11px;
   line-height: 13px;
-  font-family: Poppins-Medium;
+  font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #9E9E9E;
@@ -717,8 +727,8 @@ footer .navbar-nav {
   width: 100%;
 }
 #footer-form input,
-#send-form input,
-#send-form textarea {
+.send-form input,
+.send-form textarea {
   border: 1px solid #3A3C41;
   border-radius: 4px;
   background: transparent;
@@ -733,14 +743,14 @@ footer .navbar-nav {
   margin-right: 14px;
 }
 #footer-form input:focus,
-#send-form input:focus,
-#send-form textarea:focus {
+.send-form input:focus,
+.send-form textarea:focus {
   box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.4);
   transition: .3s;
 }
 #footer-form button,
-#send-form button {
-  font-family: Poppins-Medium;
+.send-form button {
+  font-weight: 500;
   font-size: 13px;
   line-height: 19px;
   letter-spacing: 0.363636px;
@@ -755,11 +765,11 @@ footer .navbar-nav {
   outline: none;
   transition: .3s;
 }
-#send-form button {
+.send-form button {
   width: 205px;
 }
 #footer-form button:hover,
-#send-form button:hover {
+.send-form button:hover {
   color: #000;
   background: #fff;
   border: 1px solid #fff;
@@ -775,12 +785,12 @@ footer .navbar-nav {
 footer .navbar-expand .navbar-nav .nav-link {
   padding-right: 0;
 }
-#send-form {
+.send-form {
   background: #22252A;
   border-radius: 4px;
   padding: 52px 40px;
 }
-#send-form textarea {
+.send-form textarea {
   height: 105px;
   resize: none;
   width: 339px;
@@ -794,21 +804,21 @@ footer .navbar-expand .navbar-nav .nav-link {
 .modal-dialog {
   border: none;
 }
-#send-form input {
+.send-form input {
   width: 339px;
   margin-bottom: 19px;
   margin-right: 0;
   border: 1px solid #43464A;
 }
-#send-form input::-webkit-input-placeholder,
-#send-form input::-moz-placeholder,
-#send-form input:-ms-input-placeholder,
-#send-form textarea::-webkit-input-placeholder,
-#send-form textarea::-moz-placeholder,
-#send-form textarea:-ms-input-placeholder {
+.send-form input::-webkit-input-placeholder,
+.send-form input::-moz-placeholder,
+.send-form input:-ms-input-placeholder,
+.send-form textarea::-webkit-input-placeholder,
+.send-form textarea::-moz-placeholder,
+.send-form textarea:-ms-input-placeholder {
   color: #85878A;
 }
-#send-form p {
+.send-form p {
   font-size: 18px;
   line-height: 25px;
   text-align: center;
@@ -820,9 +830,46 @@ footer .navbar-expand .navbar-nav .nav-link {
   max-width: 431px;
   margin: 6.75rem auto;
 }
-#send-form button {
+.send-form button {
   margin-top: 36px;
 }
-#send-form {
+.send-form {
   padding-bottom: 73px;
+}
+.reg-form {
+  width: 400px;
+  margin: 60px auto;
+}
+.narrow h4 {
+  font-size: 32px;
+}
+.narrow p,
+.narrow li,
+.narrow li a {
+  font-size: 18px;
+  width: 90%;
+  line-height: 1.7;
+}
+.dev {
+  color: #999;
+}
+
+.instruction-block h1 {
+    color: #3c3c3c;
+}
+.instruction-block__sec {
+    margin-left: 30px;
+}
+.instruction-block h2 {
+    color: #676767;
+    font-size: 26px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000000;
+}
+.instruction-block p{
+    margin-left: 20px;
+    font-size: 18px;
+    width: 90%;
+    line-height: 1.7;
+    color: #000000;
 }

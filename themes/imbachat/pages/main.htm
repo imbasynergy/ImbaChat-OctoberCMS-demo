@@ -32,23 +32,34 @@ recaptcha_type = "image"
 recaptcha_size = "normal"
 
 [ImbaSynergy\imbachatwidget\Components\ImbaChat ImbaChat]
-user_id = 1
+dev_id = 15
+
+[localePicker]
+forceUrl = 0
 ==
-<section class="sec1">
-    {% content 'main/section-1.htm' %}
-</section>
-<section class="sec2 wow slideInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-    {% content 'main/section-2.htm' %}
-</section>
-<section class="sec3 position-relative">
-    {% content 'main/section-3.htm' path='assets/img'|theme %}
-</section>
-<section class="sec4 position-relative">
-    {% content 'main/section-4.htm' %}
-</section>
-<section class="sec5 position-relative">
-    {% content 'main/section-5.htm' path='assets/img'|theme %}
-</section>
-<section class="sec6 position-relative">
-    {% content 'main/section-6.htm' path='assets/img'|theme %}
-</section>{% component 'ImbaChat' %}
+<div class="container position-relative">
+    <div class="row">
+        <div class="instruction-block">
+        	<h1>Инструкция по интеграции чата</h1>
+        	<div class="instruction-block__sec-1">
+        		<h2>Установка плагина</h2>
+        		<p>Для начала установите плагин. Вы можете скачать плагин с нашего <a href="https://github.com/imbasynergy/ImbaChat-OctoberCMS">репозитория</a>, и положить его в папку с таким путем "/plugins/imbasynergy/imbachatwidget". Либо в менеджере плагинов, в админки вашего сайта, найдите наш плагин через такое имя "ImbaChat-OctoberCMS"</p>
+        		
+        	</div>
+        	<div class="instruction-block__sec-2">
+        		<h2>Создание виджета</h2>
+        		<p>Теперь вам нужно зарегистрироваться. После этого вы попадете в панель администратора, где будет возможность создать виджет, путем заполнения полей, нажав на кнопку "Создать".</p>
+        	</div>
+        	<div class="instruction-block__sec-2">
+        		<h2>Настройка плагина в панеле администратора</h2>
+        		<p>Зайдите в панель администратора и нажмите "Settings", за тем нажмите на плагин "ImbaChat-OctoberCMS" и заполнить следующие поля:</p>
+        		<ul>
+        			<li>dev_id - id виджета.</li>
+        			<li>dev_login - нужно взять из поля "Developer login"</li>
+        			<li>dev_password - нужно взять из поля "Developer password"</li>
+        			<li>in_password - нужно взять из поля "Secret key"</li>
+        		</ul>
+        	</div>
+        </div>
+    </div>
+</div>
