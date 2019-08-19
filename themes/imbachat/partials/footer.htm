@@ -23,20 +23,7 @@
             <nav class="navbar navbar-expand">
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav narrow">
-                        <li class="nav-item dropdown dropup">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product</a>
-                            <div class="dropdown-menu dropdown-menu-1 animate slideIn" aria-labelledby="navbarDropdown">
-                                <ul class="main-menu">
-                                    <li><a href="#">Integration stages</a></li>
-                                    <li><a href="#">API integration</a></li>
-                                    <li><a href="#">Installation</a></li>
-                                    <li><a href="#">Backend</a></li>
-                                    <li><a href="#">Custom solution</a></li>
-                                    <li><a href="#">Updates</a></li>
-                                    <li><a href="#">Projects</a></li>
-                                </ul>
-                            </div>
-                        </li>
+                        
                         <li class="nav-item dropdown dropup">
                             <a class="nav-link dropdown-toggle no-arrow" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help</a>
                             <div class="dropdown-menu dropdown-menu-3 animate slideIn" aria-labelledby="navbarDropdown">
@@ -48,12 +35,6 @@
                                     <textarea placeholder="Your question..."></textarea>
                                     <button>Send</button>
                                 </form>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown dropup">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Eng</a>
-                            <div class="dropdown-menu lang animate slideIn" aria-labelledby="navbarDropdown">
-                                <span>Ru</span>
                             </div>
                         </li>
                     </ul>
@@ -75,15 +56,9 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <form id="send-form" class="d-flex flex-column justify-content-center align-items-center">
-                    <p>SEND US A MESSAGE</p>
-                    <input type="text" name="" placeholder="Name" required>
-                    <input type="text" name="" placeholder="Email" required>
-                    <input type="text" name="" placeholder="Phone number" required>
-                    <textarea placeholder="Your message..."></textarea>
-                    <button>Send</button>
-                </form>
+                {% component 'feedbackForm' %}
             </div>
         </div>
     </div>
 </div>
+{% component 'ImbaChat' %}
