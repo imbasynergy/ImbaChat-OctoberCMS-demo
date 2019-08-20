@@ -90,10 +90,15 @@ class apiChat extends Controller
      * Provides information about the users by search string 
      * @return array
      */
-    public function search(){
-        // ..
-        $this->testAuthOrDie(); 
-        return [];
+    public function search($key){
+        $this->testAuthOrDie();
+        //если поиск производиться через email
+        if(preg_match('/^((([0-9A-Za-z]{1}[-0-9A-z\.]{1,}[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я\.]{1,}[0-9А-Яа-я]{1}))@([-A-Za-z]{1,}\.){1,2}[-A-Za-z]{2,})$/u', $key)){
+            $res = User::where('email', $key)->get();
+        }else{
+            $res = User::where('name', $key)->get();
+        }
+        return $res;
     }
     
     /**
