@@ -39,7 +39,7 @@ class apiChat extends Controller
      * @param string $str_ids
      * @return array
      */
-    public function getUser($str_ids){
+    public function getUsers($str_ids){
         
         $this->testAuthOrDie();
         $ids = explode(",", $str_ids);
@@ -74,7 +74,8 @@ class apiChat extends Controller
         }catch (\October\Rain\Auth\AuthException $e){
             return [
                 "code" => 403,
-                "error" => 'Please enter a correct username and password. Note that both fields may be case-sensitive.'
+                "error" => 'Please enter a correct username and password. Note that both fields may be case-sensitive.',
+                'debug' => ''
             ];
         }
         
@@ -90,15 +91,21 @@ class apiChat extends Controller
      * Provides information about the users by search string 
      * @return array
      */
-    public function search($key){
+    public function usersSearch($key){
         $this->testAuthOrDie();
         //если поиск производиться через email
-        if(preg_match('/^((([0-9A-Za-z]{1}[-0-9A-z\.]{1,}[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я\.]{1,}[0-9А-Яа-я]{1}))@([-A-Za-z]{1,}\.){1,2}[-A-Za-z]{2,})$/u', $key)){
-            $res = User::where('email', $key)->get();
-        }else{
-            $res = User::where('name', $key)->get();
+        $users_m = User::whereRaw('name LIKE '.'"'.$key.'%"')->get();
+        $users = array();
+        $users['code'] = 200;
+        $users['version'] = 2;
+        foreach ($users_m as $user_m) {
+            $user = array();
+            $user['name'] = $user_m['name'];
+            $user['user_id'] =  $user_m['id'];
+            $user['email'] =  $user_m['email'];
+            $users['data'][] = $user;
         }
-        return $res;
+        return $users;
     }
     
     /**
