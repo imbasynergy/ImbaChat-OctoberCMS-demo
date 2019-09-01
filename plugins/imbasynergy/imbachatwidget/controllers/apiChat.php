@@ -92,9 +92,10 @@ class apiChat extends Controller
      * @return array
      */
     public function usersSearch($key){
+        
         $this->testAuthOrDie();
         //если поиск производиться через email
-        $users_m = User::whereRaw('name LIKE '.'"'.$key.'%"')->get();
+        $users_m = User::where('name', 'like', $key.'%')->get();
         $users = array();
         $users['code'] = 200;
         $users['version'] = 2;
@@ -111,10 +112,10 @@ class apiChat extends Controller
     /**
      * API chat integration. 
      * Provides information about api version
-     * @return array
+     * @return array 
      */
     public function getApiVersion(){
-        // ..
+      
         $this->testAuthOrDie();
         return [
             "version" => 1.0,
