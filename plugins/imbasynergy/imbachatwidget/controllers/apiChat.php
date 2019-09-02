@@ -28,7 +28,11 @@ class apiChat extends Controller
         {
             header('WWW-Authenticate: Basic realm="Backend"');
             header('HTTP/1.0 401 Unauthorized');
-            echo 'Authenticate required!';
+            echo json_encode([
+                "code" => 401,
+                "error" => 'Authenticate required!',
+                'debug' => ''
+            ]); 
             die();
         }
     }
