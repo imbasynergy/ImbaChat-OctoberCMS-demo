@@ -21,14 +21,18 @@ class apiChat extends Controller
     {
         $login = Settings::get('dev_login');
         $password = Settings::get('dev_password');
-
         if(!isset($_SERVER['PHP_AUTH_USER'])
                 || ($_SERVER['PHP_AUTH_PW']!=$password) 
                 || strtolower($_SERVER['PHP_AUTH_USER'])!=$login)
         {
             header('WWW-Authenticate: Basic realm="Backend"');
             header('HTTP/1.0 401 Unauthorized');
-            echo 'Authenticate required!';
+            echo json_encode([
+                "code" => 401,
+                "version" => $this->getApiVersion()['version'],
+                "error" => 'Authenticate required!',
+                'debug' => ''
+            ]);
             die();
         }
     }
@@ -84,21 +88,19 @@ class apiChat extends Controller
         $user['user_id'] =  $user_m['id'];
         return $user;
     }
-    
-    
+
     /**
      * API chat integration. 
      * Provides information about the users by search string 
      * @return array
      */
     public function usersSearch($key){
-        
         $this->testAuthOrDie();
         //если поиск производиться через email
-        $users_m = User::where('name', 'like', $key.'%')->get();
+        $users_m = User::where('name', $key)->orWhere('name', 'like', '%'.$key.'%')->get();
         $users = array();
         $users['code'] = 200;
-        $users['version'] = 2;
+        $users['version'] = $this->getApiVersion()['version'];
         foreach ($users_m as $user_m) {
             $user = array();
             $user['name'] = $user_m['name'];
@@ -108,7 +110,7 @@ class apiChat extends Controller
         }
         return $users;
     }
-    
+
     /**
      * API chat integration. 
      * Provides information about api version
@@ -116,7 +118,7 @@ class apiChat extends Controller
      */
     public function getApiVersion(){
       
-        $this->testAuthOrDie();
+        // $this->testAuthOrDie();
         return [
             "version" => 1.0,
             "type" => "OctoberCMS plugin"
