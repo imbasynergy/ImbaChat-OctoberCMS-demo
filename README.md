@@ -1,43 +1,46 @@
 [![ImbaChat](http://imbachat.com/themes/imbachat/assets/img/logo.svg "ImbaChat")](http://imbachat.com "ImbaChat")
 
-# Пример интеграции виджета чата в October CMS
+# Chat widget for October CMS
 
-Пример интеграции виджета чата в October CMS 
-Позволяет бесплатно добавить виджет чата между пользователями вашего сайта. 
+This is a free plugin for integrating October CMS with imbachat.com chat service
+Allows you to add a chat widget for free between users of your site.
 
-# Ссылки
+# Links
 
-[Демо сайт](http://octobercms.imbachat.com/user)
+[Demo site](http://octobercms.imbachat.com)
 
-[Плагин для October cms](https://github.com/imbasynergy/ImbaChat-OctoberCMS)
+[Plugin for October cms](https://octobercms.com/plugin/imbasynergy-imbachatwidget)
 
-[Исходный код демо сайта](https://github.com/imbasynergy/ImbaChat-OctoberCMS-demo)
+[Source code of the demo site](https://github.com/imbasynergy/ImbaChat-OctoberCMS-demo)
 
-[Техническая поддержка](http://imbachat.com/help)
+[Technical support](http://imbachat.com/help)
 
-# Особенности
+# Features
 
-* Полная интеграция с базой пользователей вашего сайта
-* Единый механизм авторизации в чате и на сайте
-* Переписка между пользователями 1 на 1
-* Отправка картинок
-* Отправка геопозиции
-* Отправка смайлов
-* Real time доставка сообщений
-* Не нагружает ваш сервер (Виджет чата использует сервера проекта imbachat.com  )
-* Можно использовать на shared хостинге
-* Продолжает корректную работу даже без интернета (сообщения отправятся сразу после того как появится интернет)
+- Full integration with the user base of your website
+- Single authorisation mechanism in a chat and on a website (users need not sign up in a chat)
+- Chatting between users mano y mano
+- Sending pictures
+- Sending geolocation
+- Sending smiles
+- Real time message delivery
+- It does not load your server (The chat widget uses project servers imbachat.com)
+- You can use it on shared hosting
+- It continues correct working even without the Internet (Your messages will be sent as soon the Internet appears)
+- You can build it into HTML5 mobile app
+
+[![Chat demo](http://imbachat.com/storage/app/uploads/public/docs/demo.gif "Chat demo")](https://imbachat.com "Chat demo")
 
 
-## Шаги для установки виджета чата:
+## Steps to install a chat widget:
+- Install this plugin on your website
+- Register on the site [imbachat.com](https://imbachat.com)
+- Go to the [widget page](https://imbachat.com/admin/widgets). and create yourself a widget
+- In the process of creating a widget, you will need to select "Integration with October CMS" and follow the instructions
 
-- Установите на свой сайт этот плагин
-- Зарегистирируйтесь на сайте [imbachat.com](https://imbachat.com)
-- Зайдите на [страницу с виджетами](https://imbachat.com/admin/widgets). и создайте себе виджет
-- В процессе создания виджета надо будет выбрать "Интеграция с October CMS" и следовать инструкциям
+### Insert a chat component on a page
 
-### Вставка компонента чата на страницу
-- Подключите `[imbaChat]` компонент в файле страницы.
-- `[imbaChat]` компонент вставляет javascript, который инициализиует виджет чата
+- Connect the `[imbaChat]` component in the page file.
+- `[imbaChat]` component inserts javascript that initializes the chat widget
 
 ```{% component 'ImbaChat'  %}```
