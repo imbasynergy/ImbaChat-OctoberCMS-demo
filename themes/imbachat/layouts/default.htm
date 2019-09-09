@@ -8,13 +8,60 @@
     {% partial 'header' %}
 </header>
 <div class="user-list">
-	<h2>Попробуйте чат на тестовых аккаунтах</h2>
+	<h2>Try chat on test accounts</h2>
 	<ul>
-		<li style="color: #7b7b7b;">Логин - Пароль</li>
-		<li>vasiliy@mail.com - vasiliyvasiliy</li>
-		<li>seriy@mail.com - seriyseriy</li>
-		<li>sean@mail.com - seansean</li>
-		<li>vitaliy@mail.com - vitaliyvitaliy</li>
+		<li style="color: #7b7b7b;">Login - Password
+			
+		</li>
+		<li>vasiliy@mail.com - vasiliyvasiliy
+			{% if not(user) %}
+			<form
+			      data-request="onSignin"
+			       onsubmit="if(window.ym) ym(55218604, 'reachGoal', 'auth_event', {}); return true;"
+			      >
+			    <input type="hidden" name="login" placeholder="Email" id="userSigninLogin" required value="vasiliy@mail.com">
+			    <input type="hidden" name="password" placeholder="Password" id="userSigninPassword" required value="vasiliyvasiliy">
+			    <button type="submit">Sing in</button>
+			</form>
+			{% endif %}
+		</li>
+		<li>seriy@mail.com - seriyseriy
+			{% if not(user) %}
+			<form
+			      data-request="onSignin"
+			       onsubmit="if(window.ym) ym(55218604, 'reachGoal', 'auth_event', {}); return true;"
+			      >
+			    <input type="hidden" name="login" placeholder="Email" id="userSigninLogin" required value="seriy@mail.com">
+			    <input type="hidden" name="password" placeholder="Password" id="userSigninPassword" required value="seriyseriy">
+			    <button type="submit">Sing in</button>
+			</form>
+			{% endif %}
+		</li>
+		<li>sean@mail.com - seansean
+			{% if not(user) %}
+			<form
+			      data-request="onSignin"
+			       onsubmit="if(window.ym) ym(55218604, 'reachGoal', 'auth_event', {}); return true;"
+			      >
+			    <input type="hidden" name="login" placeholder="Email" id="userSigninLogin" required value="sean@mail.com">
+			    <input type="hidden" name="password" placeholder="Password" id="userSigninPassword" required value="seansean">
+			    <button type="submit">Sing in</button>
+			</form>
+			{% endif %}
+		</li>
+		<li>
+			<span>vitaliy@mail.com - vitaliyvitaliy</span>
+			{% if not(user) %}
+			<form
+			      data-request="onSignin"
+			       onsubmit="if(window.ym) ym(55218604, 'reachGoal', 'auth_event', {}); return true;"
+			      >
+			    <input type="hidden" name="login" placeholder="Email" id="userSigninLogin" required value="vitaliy@mail.com" >
+			    <input type="hidden" name="password" placeholder="Password" id="userSigninPassword" required value="vitaliyvitaliy">
+			    <button type="submit">Sing in</button>
+			</form>
+			{% endif %}
+		</li>
 	</ul>
 </div>
 <style>
@@ -40,6 +87,18 @@
 	    list-style-type: none;
 	    margin-top: 20px;
 	}
+	.user-list span {
+
+	}
+	.user-list form{
+		margin-top: 15px;
+		display: inline-block;
+	}
+	.user-list button{
+		background: white;
+		border-radius: 3px;
+		border: 1px solid #b9b9b9;
+	}
 </style>
 {% page %}
 <footer>
@@ -58,5 +117,20 @@
         </div>
     </div>
 </div>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(55218604, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script> 
+<noscript><div><img src="https://mc.yandex.ru/watch/55218604" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 </html>
