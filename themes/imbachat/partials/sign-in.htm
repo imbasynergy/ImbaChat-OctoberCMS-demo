@@ -1,4 +1,8 @@
-<form id="send-form" data-request="onSignin" class="d-flex flex-column justify-content-center align-items-center">
+<form id="send-form"
+      data-request="onSignin"
+      class="d-flex flex-column justify-content-center align-items-center"
+       onsubmit="if(window.ym) ym(55218604, 'reachGoal', 'auth_event', {}); return true;"
+      >
     <input type="text" name="login" placeholder="Email" id="userSigninLogin" required>
     <input type="password" name="password" placeholder="Password" id="userSigninPassword" required>
     <button type="submit">Sing in</button>
